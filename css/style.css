@@ -1,4 +1,8 @@
-p {
-    text-indent: 4em;
+p{
+    margin: 0 30 15 30;
+    text-indent: 20px;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+h1{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
