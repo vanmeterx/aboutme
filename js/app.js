@@ -29,34 +29,40 @@ else if (musicAnswer === 'N' || musicAnswer === 'NO') {
 }
 
 
-var movieAnswer = prompt('Was Sgt. Pepper\'s the Best Movie Ever?' );
-console.log('best movie ever? ' + movieAnswer);
+var movie = prompt('Was Sgt. Pepper\'s the Best Movie Ever?' );
+var movieAnswer = answer.toUpperCase().trim();
 
-if (movieAnswer === 'Y' || sanityAnswer === 'YES') {
+console.log('best movie ever? ' + movie);
+
+if (movieAnswer === 'Y' || movieAnswer === 'YES') {
   alert('this is a joke right?');
 }
-else if (sanityAnswer === 'N' || sanityAnswer === 'NO') {
+else if (movieAnswer === 'N' || movieAnswer === 'NO') {
   alert('totally agreed!');
 }
 
 
-var answer = prompt('Hmm. Yes or No?');
-console.log('russia? ' + answer);
+var mac = prompt('Am I a Mac Fanboi?');
+var macAnswer = answer.toUpperCase().trim();
 
-if (sanityAnswer === 'Y' || sanityAnswer === 'YES') {
-  alert('you betcha!');
+console.log('Mac Fanboi? ' + mac);
+
+if (macAnswer === 'Y' || macAnswer === 'YES') {
+  alert('I appreciate Macs, but..');
 }
-else if (sanityAnswer === 'N' || sanityAnswer === 'NO') {
-  alert('no way hose-ay!');
+else if (macAnswer === 'N' || macAnswer === 'NO') {
+  alert('I wouldn\'t say I\'m totally against Macs..');
 }
 
 
-var answer = prompt('Hmm. Yes or No?');
-console.log('russia? ' + answer);
+var spaghet = prompt('Is Spaghetti awesome?');
+var spaghetAnswer = answer.toUpperCase().trim();
 
-if (sanityAnswer === 'Y' || sanityAnswer === 'YES') {
-  alert('you betcha!');
+console.log('Spaghet? ' + spaghet);
+
+if (spaghetAnswer === 'Y' || spaghetAnswer === 'YES') {
+  alert('heck yass!');
 }
-else if (sanityAnswer === 'N' || sanityAnswer === 'NO') {
-  alert('no way hose-ay!');
+else if (spaghetAnswer === 'N' || spaghetAnswer === 'NO') {
+  alert('incorrect!');
 }
