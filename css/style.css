@@ -1,8 +1,17 @@
+body{background-color: beige}
 p{
-    margin: 0 30 15 30;
+    margin: 0 60 15 60;
     text-indent: 20px;
+    text-align: justify;
+
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 h1{
+    margin: 0 60 15 30;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: indigo;
+}
+h3{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: indigo;
 }
