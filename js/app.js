@@ -1,8 +1,7 @@
 'use strict';
 
-
 var travel = prompt('Have I ever traveled to Russia?');
-var sanityAnswer = answer.toUpperCase().trim();
+var sanityAnswer = travel.toUpperCase().trim();
 
 console.log('russia? ' + travel);
 
@@ -17,7 +16,7 @@ else if (sanityAnswer === 'N' || sanityAnswer === 'NO') {
 
 
 var music = prompt('Is SCREAMO the best music genre ever?');
-var musicAnswer = answer.toUpperCase().trim();
+var musicAnswer = music.toUpperCase().trim();
 
 console.log('screamo? ' + music);
 
@@ -30,7 +29,7 @@ else if (musicAnswer === 'N' || musicAnswer === 'NO') {
 
 
 var movie = prompt('Was Sgt. Pepper\'s the Best Movie Ever?' );
-var movieAnswer = answer.toUpperCase().trim();
+var movieAnswer = movie.toUpperCase().trim();
 
 console.log('best movie ever? ' + movie);
 
@@ -43,7 +42,7 @@ else if (movieAnswer === 'N' || movieAnswer === 'NO') {
 
 
 var mac = prompt('Am I a Mac Fanboi?');
-var macAnswer = answer.toUpperCase().trim();
+var macAnswer = mac.toUpperCase().trim();
 
 console.log('Mac Fanboi? ' + mac);
 
@@ -56,7 +55,7 @@ else if (macAnswer === 'N' || macAnswer === 'NO') {
 
 
 var spaghet = prompt('Is Spaghetti awesome?');
-var spaghetAnswer = answer.toUpperCase().trim();
+var spaghetAnswer = spaghet.toUpperCase().trim();
 
 console.log('Spaghet? ' + spaghet);
 
