@@ -7,11 +7,11 @@ var sanityAnswer = travel.toUpperCase().trim();
 console.log('russia? ' + travel);
 
 if (sanityAnswer === 'Y' || sanityAnswer === 'YES') {
-  alert('you betcha!');
+  alert('You betcha!');
 }
 
 else if (sanityAnswer === 'N' || sanityAnswer === 'NO') {
-  alert('no way hose-ay!');
+  alert('No way hose-ay!');
 }
 
 
@@ -19,26 +19,26 @@ else if (sanityAnswer === 'N' || sanityAnswer === 'NO') {
 var music = prompt('Is SCREAMO the best music genre ever?');
 var musicAnswer = music.toUpperCase().trim();
 
-console.log('screamo? ' + music);
+console.log('Screamo? ' + music);
 
 if (musicAnswer === 'Y' || musicAnswer === 'YES') {
-  alert('a-negative!');
+  alert('Negatory!');
 }
 else if (musicAnswer === 'N' || musicAnswer === 'NO') {
-  alert('correctamundo!');
+  alert('Correct-a-mundo!');
 }
 
 
 var movie = prompt('Was Sgt. Pepper\'s the Best Movie Ever?' );
 var movieAnswer = movie.toUpperCase().trim();
 
-console.log('best movie ever? ' + movie);
+console.log('Best movie ever? ' + movie);
 
 if (movieAnswer === 'Y' || movieAnswer === 'YES') {
-  alert('this is a joke right?');
+  alert('This is a joke right?');
 }
 else if (movieAnswer === 'N' || movieAnswer === 'NO') {
-  alert('totally agreed!');
+  alert('Totally agreed!');
 }
 
 
@@ -61,10 +61,10 @@ var spaghetAnswer = spaghet.toUpperCase().trim();
 console.log('Spaghet? ' + spaghet);
 
 if (spaghetAnswer === 'Y' || spaghetAnswer === 'YES') {
-  alert('heck yass!');
+  alert('Heck yeah!');
 }
 else if (spaghetAnswer === 'N' || spaghetAnswer === 'NO') {
-  alert('incorrect!');
+  alert('Incorrect!');
 }
 
 
@@ -74,7 +74,9 @@ var guessNum = prompt('What number am I thinking?');
 console.log('Number Guess: ' + guessNum);
 var guessCount = 1;
 
-while (guessNum !== '27') {
+
+//needed help stopping after 7.
+while (guessNum !== 27 & guessCount < 7) {
 
   if (guessNum === null) {
     console.log('Cancel Button');
@@ -111,12 +113,35 @@ if (guessNum === null) {
   if (guessCount === 1) {
     alert('Woah.. a hole in one!');
   } else {
-    alert('Nicely done for ' + guessCount + ' try!');
-  }
+    alert('Sorry! Only 7 guesses! The Correct number was ' + guessNum);
+    /* extra stuff i may or may not need.
   if (guessCount >= 7) {
-    alert('Sorry! Only 7 guesses!');
+
   } else {
     console.log('Max 7 Tries');
+    */
   }
 }
-//
+//Multiple Choice
+var vehicles = ['VOLKSWAGEN BUS', 'CAMARO', 'TESLA', 'CHALLENGER'];
+console.log(vehicles.length);
+
+while (guessCount < 6) {
+} else {
+  alert('Sorry! Only 6 guesses!');
+  if (vehicles === null) {
+    console.log('Cancel Button');
+
+    break;
+  }
+
+var vehicleGuess = prompt('Guess the vehicle I would love to have');
+var vehicleGuessTrimmedToUpper = vehicleGuess.toUpperCase().trim();
+
+if (vehicle.indexOf(vehicleGuessTrimmedToUpper) >= 0) {
+  alert('Right on! ' + vehicleGuess + ' is a fantastic autmobile.');
+} else {
+  alert('Sorry. Try again.');
+}
+
+alert('All the vehicles: ' + vehicles.join(', '));
