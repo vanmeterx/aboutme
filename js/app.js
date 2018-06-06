@@ -68,8 +68,8 @@ else if (spaghetAnswer === 'N' || spaghetAnswer === 'NO') {
 }
 
 
-//Wednesday's Assignment
-//number guessing. reused the in class example
+//Wednesday's assigned project:
+//number guessing.
 var guessNum = prompt('What number am I thinking?');
 console.log('Number Guess: ' + guessNum);
 var guessCount = 1;
@@ -114,34 +114,44 @@ if (guessNum === null) {
     alert('Woah.. a hole in one!');
   } else {
     alert('Sorry! Only 7 guesses! The Correct number was ' + guessNum);
+   
     /* extra stuff i may or may not need.
   if (guessCount >= 7) {
 
   } else {
     console.log('Max 7 Tries');
     */
+
   }
 }
-//Multiple Choice
-var vehicles = ['VOLKSWAGEN BUS', 'CAMARO', 'TESLA', 'CHALLENGER'];
-console.log(vehicles.length);
 
-while (guessCount < 6) {
-} else {
-  alert('Sorry! Only 6 guesses!');
-  if (vehicles === null) {
+// Multiple Choice
+var cars = ['MICROBUS', 'CAMARO', 'TESLA', 'CHALLENGER'];
+console.log(cars.length);
+var carGuess = prompt('Guess the dream car!');
+var carGuessTrimmedToUpper = carGuess.toUpperCase().trim();
+
+while (carGuess < 7) {
+  if (carGuess === null) {
     console.log('Cancel Button');
-
     break;
   }
 
-var vehicleGuess = prompt('Guess the vehicle I would love to have');
-var vehicleGuessTrimmedToUpper = vehicleGuess.toUpperCase().trim();
+  if (cars.indexOf(carGuessTrimmedToUpper) >= 0) {
+    alert('Huzzah! ' + carGuess + ' is one of the cars!');
+  } else {
+    alert('nope');
+  }
 
-if (vehicle.indexOf(vehicleGuessTrimmedToUpper) >= 0) {
-  alert('Right on! ' + vehicleGuess + ' is a fantastic autmobile.');
+  var carWarn = 'Nope!';
+  
+  carGuess = prompt(carWarn + ' Try again:');
+
+  console.log('Car-Guess Number: ' + carGuess);
+
+  carGuess = carGuess + 1;
+if (carGuess === null) {
+  alert('Cheater. It was ' + cars.join(', '));
 } else {
-  alert('Sorry. Try again.');
-}
-
-alert('All the vehicles: ' + vehicles.join(', '));
+  console.log('cancel button');
+  }
