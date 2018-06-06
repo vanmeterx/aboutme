@@ -1,5 +1,6 @@
 'use strict';
 
+//Tuesday's Assignment:
 var travel = prompt('Have I ever traveled to Russia?');
 var sanityAnswer = travel.toUpperCase().trim();
 
@@ -65,3 +66,57 @@ if (spaghetAnswer === 'Y' || spaghetAnswer === 'YES') {
 else if (spaghetAnswer === 'N' || spaghetAnswer === 'NO') {
   alert('incorrect!');
 }
+
+
+//Wednesday's Assignment
+//number guessing. reused the in class example
+var guessNum = prompt('What number am I thinking?');
+console.log('Number Guess: ' + guessNum);
+var guessCount = 1;
+
+while (guessNum !== '27') {
+
+  if (guessNum === null) {
+    console.log('Cancel Button');
+
+    break;
+  }
+
+  var promptWarn = 'Nope!';
+  if (guessNum > 27) {
+    promptWarn = 'Too high!';
+  } else if (guessNum < 27) {
+    promptWarn = 'Too low!';
+  }
+  console.log(promptWarn);
+
+  guessNum = prompt(promptWarn + ' Try again:');
+
+  console.log('Number Guess: ' + guessNum);
+
+  guessCount = guessCount + 1;
+
+  console.log('Guess Count: ' + guessCount);
+}
+
+console.log('finished');
+
+if (guessNum === null) {
+
+  alert('Cheater. It was 27');
+
+} else {
+  console.log('cancel button');
+
+  if (guessCount === 1) {
+    alert('Woah.. a hole in one!');
+  } else {
+    alert('Nicely done for ' + guessCount + ' try!');
+  }
+  if (guessCount >= 7) {
+    alert('Sorry! Only 7 guesses!');
+  } else {
+    console.log('Max 7 Tries');
+  }
+}
+//
