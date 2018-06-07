@@ -78,13 +78,13 @@ function spaghet(){
 //Wednesday's assigned project:
 //number guessing.
 function guessNum(){
-  var guessNum = prompt('What number am I thinking?');
+  var guessNum = Number(prompt('What number am I thinking?'));
   console.log('Number Guess: ' + guessNum);
   var guessCount = 1;
 
 
   //needed help stopping after 7. thanks jess.
-  while (guessNum !== 27 && guessCount < 7) {
+  while (guessNum !== 27 && guessCount < 4) {
 
     if (guessNum === null) {
       console.log('Cancel Button');
@@ -92,15 +92,17 @@ function guessNum(){
       break;
     }
 
-    var promptWarn = 'Nope!';
+    var promptWarn;
     if (guessNum > 27) {
       promptWarn = 'Too high!';
     } else if (guessNum < 27) {
       promptWarn = 'Too low!';
+    } else if (guessNum === 27){
+      promptWarn = 'Correct!';
+      console.log(promptWarn);
     }
-    console.log(promptWarn);
 
-    guessNum = prompt(promptWarn + ' Try again:');
+    guessNum = Number(prompt(promptWarn + ' Try again:'));
 
     console.log('Number Guess: ' + guessNum);
 
@@ -114,14 +116,15 @@ function guessNum(){
   if (guessNum === null) {
 
     alert('Cheater. It was 27');
-
-  } else {
     console.log('cancel button');
+  } else {
 
     if (guessCount === 1) {
       alert('Woah.. a hole in one!');
+    } else if (guessCount <= 4) {
+      alert('Nice! You got it in '+guessCount+' tries.');
     } else {
-      alert('Sorry! Only 7 guesses! The Correct number was ' + guessNum);
+      alert('Sorry! Only 4 guesses! The Correct number was ' + '27');
 
       /* extra stuff i may or may not need.
     if (guessCount >= 7) {
@@ -139,12 +142,13 @@ function cars(){
   var cars = ['MICROBUS', 'CAMARO', 'TESLA', 'CHALLENGER'];
   console.log(cars.length);
   var carGuess = prompt('Guess the dream car!');
-  var carGuessTrimmedToUpper = carGuess.toUpperCase().trim();
+  var carGuessTrimmedToUpper = cars.indexOf(carGuess.toUpperCase().trim());
 
   var carCount = 1;
 
+  console.log(carGuessTrimmedToUpper);
 
-  while (carGuess !== cars & carCount < 7) {
+  while (carGuessTrimmedToUpper < 0 && carCount < 7) {
 
     if (carGuess === null) {
       console.log('Cancel Button');
@@ -156,6 +160,7 @@ function cars(){
     console.log(carWarn);
 
     carGuess = prompt(carWarn + ' Try again:');
+    var carGuessTrimmedToUpper = cars.indexOf(carGuess.toUpperCase().trim());
 
     console.log('Car Guess: ' + carGuess);
 
@@ -173,7 +178,7 @@ function cars(){
   } else {
     console.log('cancel button');
 
-    if (cars.indexOf(carGuessTrimmedToUpper) >= 0) {
+    if (carGuessTrimmedToUpper >= 0) {
       alert('Groovy! ' + carGuess + ' is correct!');
     }
   }
