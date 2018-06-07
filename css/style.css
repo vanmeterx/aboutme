@@ -1,18 +1,43 @@
 body{background-color: beige}
 p{
-    margin: 0 60 15 60;
+    margin: 0px 60px 15px 60px;
     text-indent: 20px;
     text-align: justify;
-
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 h1{
-    margin: 0 60 15 30;
+    margin: 0px 60px 15px 30px;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     color: indigo;
 }
 h3{
-    margin: 0 60 15 30;
+    margin: 0px 60px 15px 30px;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     color: indigo;
+}
+#box1{
+    background-color: rgb(207, 206, 204);
+    padding: 10px;
+    border-width: 300px;
+    margin-top: 60px;
+    margin-left: 60px;
+    float: left;
+
+}
+#box2{
+    background-color: rgb(207, 206, 204);
+    padding: 10px;
+    border-width: 300px;
+    margin-top: 60px;
+    margin-right: 60px;
+    float: right;
+}
+ol {
+    list-style-position: outside;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+ul {
+    list-style-type: circle;
+    list-style-position: outside;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }

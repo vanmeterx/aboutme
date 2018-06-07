@@ -75,7 +75,7 @@ console.log('Number Guess: ' + guessNum);
 var guessCount = 1;
 
 
-//needed help stopping after 7.
+//needed help stopping after 7. thanks jess.
 while (guessNum !== 27 & guessCount < 7) {
 
   if (guessNum === null) {
@@ -114,7 +114,7 @@ if (guessNum === null) {
     alert('Woah.. a hole in one!');
   } else {
     alert('Sorry! Only 7 guesses! The Correct number was ' + guessNum);
-   
+
     /* extra stuff i may or may not need.
   if (guessCount >= 7) {
 
@@ -125,33 +125,46 @@ if (guessNum === null) {
   }
 }
 
-// Multiple Choice
+//not sure if this makes sense. attempting to use what i learned above to this set.
+
 var cars = ['MICROBUS', 'CAMARO', 'TESLA', 'CHALLENGER'];
 console.log(cars.length);
 var carGuess = prompt('Guess the dream car!');
 var carGuessTrimmedToUpper = carGuess.toUpperCase().trim();
 
-while (carGuess < 7) {
+var carCount = 1;
+
+
+while (carGuess !== cars & carCount < 7) {
+
   if (carGuess === null) {
     console.log('Cancel Button');
+
     break;
   }
 
-  if (cars.indexOf(carGuessTrimmedToUpper) >= 0) {
-    alert('Huzzah! ' + carGuess + ' is one of the cars!');
-  } else {
-    alert('nope');
-  }
-
   var carWarn = 'Nope!';
-  
+  console.log(carWarn);
+
   carGuess = prompt(carWarn + ' Try again:');
 
-  console.log('Car-Guess Number: ' + carGuess);
+  console.log('Car Guess: ' + carGuess);
 
-  carGuess = carGuess + 1;
+  carCount = carCount + 1;
+
+  console.log('Guess Count: ' + carCount);
+}
+
+console.log('finished');
+
 if (carGuess === null) {
+
   alert('Cheater. It was ' + cars.join(', '));
+
 } else {
   console.log('cancel button');
+
+  if (cars.indexOf(carGuessTrimmedToUpper) >= 0) {
+    alert('Groovy! ' + carGuess + ' is correct!');
   }
+}
