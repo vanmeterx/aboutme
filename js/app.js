@@ -1,19 +1,22 @@
 'use strict';
 
 //Tuesday's Assignment:
-var travel = prompt('Have I ever traveled to Russia?');
-var sanityAnswer = travel.toUpperCase().trim();
+function questionUno() {
+  var travel = prompt('Have I ever traveled to Russia?');
+  var sanityAnswer = travel.toUpperCase().trim();
 
-console.log('russia? ' + travel);
+  console.log('russia? ' + travel);
 
-if (sanityAnswer === 'Y' || sanityAnswer === 'YES') {
-  alert('You betcha!');
+  if (sanityAnswer === 'Y' || sanityAnswer === 'YES') {
+    alert('You betcha!');
+  }
+
+  else if (sanityAnswer === 'N' || sanityAnswer === 'NO') {
+    alert('No way hose-ay!');
+  }
 }
 
-else if (sanityAnswer === 'N' || sanityAnswer === 'NO') {
-  alert('No way hose-ay!');
-}
-
+questionUno();
 
 
 var music = prompt('Is SCREAMO the best music genre ever?');
